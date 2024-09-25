@@ -11,7 +11,7 @@ namespace TrabalhoNovo
         Label labelPontuacao;
         Label labelNivel;
 
-        public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5)
+        public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5, Label labelPontuacao, Label labelNivel)
         {
             this.labelPontuacao = labelPontuacao;
             this.labelNivel = labelNivel;

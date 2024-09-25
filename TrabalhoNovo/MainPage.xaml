@@ -113,15 +113,15 @@
                         HeightRequest="40"
                         Margin="5"/>
 
-                <Label Grid.Row="8"
-                       Text="Pontuação:"
-                       x:Name="Pontuacao"
-                       Grid.ColumnSpan="2"/>
+                <Label   x:Name="Pontuacao"
+                        Grid.Row="8"
+                        Text="Pontuação:"
+                        Grid.ColumnSpan="2"/>
 
-                <Label Grid.Row="8"
+                <Label  x:Name="Nivel"
+                       Grid.Row="8"
                        Text="Nível:"
-                       Grid.Column="2"
-                       x:Name="Nivel"/>
+                       Grid.Column="2"/>
         </Grid>
 
 
