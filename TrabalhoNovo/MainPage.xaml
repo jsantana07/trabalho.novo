@@ -81,7 +81,7 @@
 
                 <Button Grid.Row="7"
                         Grid.Column="0"
-                        Text="Cartas"
+                        Text="Universitário"
                         BackgroundColor="#5c3b78"
                         TextColor="White"
                         FontSize="12"
@@ -92,7 +92,8 @@
                         Margin="5"/>
                 <Button Grid.Row="7"
                         Grid.Column="1"
-                        Text="Retira 1 errado"
+                        Text="Retira erradas"
+                        Clicked="retirarClicked"
                         BackgroundColor="#5c3b78"
                         TextColor="White"
                         FontSize="12"
@@ -103,7 +104,8 @@
                         Margin="5"/>
                 <Button Grid.Row="7"
                         Grid.Column="2"
-                        Text="Universitário"
+                        Text="Pular"
+                        Clicked="pulaclicado"
                         BackgroundColor="#5c3b78"
                         TextColor="White"
                         FontSize="12"
@@ -114,14 +116,14 @@
                         Margin="5"/>
 
                 <Label   x:Name="Pontuacao"
-                        Grid.Row="8"
-                        Text="Pontuação:"
-                        Grid.ColumnSpan="2"/>
+                         Grid.Row="8"
+                         Text="Pontuação:"
+                         Grid.ColumnSpan="2"/>
 
                 <Label  x:Name="Nivel"
-                       Grid.Row="8"
-                       Text="Nível:"
-                       Grid.Column="2"/>
+                        Grid.Row="8"
+                        Text="Nível:"
+                        Grid.Column="2"/>
         </Grid>
 
 

@@ -11,6 +11,12 @@ namespace TrabalhoNovo
         Label labelPontuacao;
         Label labelNivel;
 
+        public Questao GetQuestaoCorrente()
+        {
+            return QuestaoCorrente;
+        }
+       
+
         public Gerenciador(Label labelPerg, Button ButtonResposta1, Button ButtonResposta2, Button ButtonResposta3, Button ButtonResposta4, Button ButtonResposta5, Label labelPontuacao, Label labelNivel)
         {
             this.labelPontuacao = labelPontuacao;
@@ -374,25 +380,25 @@ namespace TrabalhoNovo
                 }
             }
 
-                else
-                {
-                    await App.Current.MainPage.DisplayAlert("Fim", "Você errou!", "Ok");
-                    Inicializar();
-
-
-                }
-
-            }
-
-            void ProximaQuestao()
+            else
             {
-                var numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
-                while (ListaQuestoesRespondidas.Contains(numAleat))
-                    numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
-                ListaQuestoesRespondidas.Add(numAleat);
-                QuestaoCorrente = ListaQuestoes[numAleat];
-                QuestaoCorrente.Desenhar();
+                await App.Current.MainPage.DisplayAlert("Fim", "Você errou!", "Ok");
+                Inicializar();
+
+
             }
+
+        }
+
+       public void ProximaQuestao()
+        {
+            var numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
+            while (ListaQuestoesRespondidas.Contains(numAleat))
+                numAleat = Random.Shared.Next(0, ListaQuestoes.Count - 1);
+            ListaQuestoesRespondidas.Add(numAleat);
+            QuestaoCorrente = ListaQuestoes[numAleat];
+            QuestaoCorrente.Desenhar();
+        }
 
         public int Pontuacao { get; private set; }
         int NivelAtual = 0;
