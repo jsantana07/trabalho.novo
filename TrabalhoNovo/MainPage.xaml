@@ -82,6 +82,7 @@
                 <Button Grid.Row="7"
                         Grid.Column="0"
                         Text="Universitário"
+                        Clicked="universitarioClicked"
                         BackgroundColor="#5c3b78"
                         TextColor="White"
                         FontSize="12"

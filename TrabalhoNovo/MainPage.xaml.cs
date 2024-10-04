@@ -40,6 +40,16 @@ public partial class MainPage : ContentPage
 
 	}
 
+	void universitarioClicked(object sender, EventArgs args)
+	{
+		var ajuda = new Universitario();
+		ajuda.ConfiguraDesenho( ButtonResposta1, ButtonResposta2,  ButtonResposta3,  ButtonResposta4, ButtonResposta5);
+		ajuda.RealizaAjuda(gerenciador.GetQuestaoCorrente());
+		(sender as Button).IsVisible = false;
+
+	}
+
+
 	void pulaclicado(object sender, EventArgs args)
 	{
 		gerenciador.ProximaQuestao();
