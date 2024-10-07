@@ -3,11 +3,12 @@
 public partial class MainPage : ContentPage
 {
 	Gerenciador gerenciador;
-
+	private int clickcount=0;
 	public MainPage()
 	{
 		InitializeComponent();
 		gerenciador = new Gerenciador(labelPergunta, ButtonResposta1, ButtonResposta2, ButtonResposta3, ButtonResposta4, ButtonResposta5, Pontuacao, Nivel);
+		
 	}
 
 	void ButtonResposta1Clicked(object sender, EventArgs args)
@@ -53,7 +54,15 @@ public partial class MainPage : ContentPage
 	void pulaclicado(object sender, EventArgs args)
 	{
 		gerenciador.ProximaQuestao();
+		clickcount++;
+       if  (clickcount>=3)
+	   {
 		(sender as Button).IsVisible = false;
+	   }
+	   else
+	   {
+	   (sender as Button).IsVisible = true;
+	   }
 	}
 
 }
