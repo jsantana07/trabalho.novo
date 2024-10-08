@@ -106,7 +106,7 @@
                 <Button x:Name="pular"
                         Grid.Row="7"
                         Grid.Column="2"
-                        Text="Pular"
+                        Text="restam 3 pula"
                         Clicked="pulaclicado"
                         BackgroundColor="#5c3b78"
                         TextColor="White"
