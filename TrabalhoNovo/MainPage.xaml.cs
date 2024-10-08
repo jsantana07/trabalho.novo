@@ -4,6 +4,9 @@ public partial class MainPage : ContentPage
 {
 	Gerenciador gerenciador;
 	private int clickcount=0;
+
+	private int vezesclicked=0;
+
 	public MainPage()
 	{
 		InitializeComponent();
@@ -55,6 +58,7 @@ public partial class MainPage : ContentPage
 	{
 		gerenciador.ProximaQuestao();
 		clickcount++;
+		vezesclicked++;
        if  (clickcount>=3)
 	   {
 		(sender as Button).IsVisible = false;
@@ -63,6 +67,21 @@ public partial class MainPage : ContentPage
 	   {
 	   (sender as Button).IsVisible = true;
 	   }
+
+		if (vezesclicked==1)
+		{
+			pular.Text="restam 2 pula";
+		}
+		else if (vezesclicked==2)
+		{
+			pular.Text="restam 1 pula";
+		}
+		else if(vezesclicked>=3)
+		{
+			(sender as Button).IsVisible = false;
+		}
+
+
 	}
 
 }
